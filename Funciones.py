@@ -12,6 +12,7 @@ class Funciones_Globales:
     def __init__(self, driver, timeout: int = 10):
         self.driver = driver
         self.default_timeout = timeout
+        self.wait = WebDriverWait(driver, 10)
 
     # -------------------- helpers internos --------------------
     def _wait(self, seconds: int | float | None = None):
@@ -119,6 +120,28 @@ class Funciones_Globales:
         except TimeoutException as ex:
             print(ex.msg)
             print("No se encontró el elemento " + xpath)
+        # ✅ Hover (colocar el puntero encima)
+
+
+    # ✅ Hover sobre un elemento
+    def Hover_Mixto(self, tipo, selector, tiempo=0.3):
+        try:
+            elemento = self.wait.until(EC.visibility_of_element_located((tipo, selector)))
+            ActionChains(self.driver).move_to_element(elemento).pause(tiempo).perform()
+            print(f"[OK] Hover sobre: {selector}")
+        except Exception as e:
+            print(f"[ERROR] No se pudo hacer hover sobre {selector}: {e}")
+
+    # ✅ Hover y luego click (submenú)
+    def HoverYClick_Mixto(self, tipo_menu, selector_menu, tipo_sub, selector_sub, tiempo=0.3):
+        try:
+            menu = self.wait.until(EC.visibility_of_element_located((tipo_menu, selector_menu)))
+            ActionChains(self.driver).move_to_element(menu).pause(tiempo).perform()
+            sub = self.wait.until(EC.element_to_be_clickable((tipo_sub, selector_sub)))
+            sub.click()
+            print(f"[OK] Hover y click en submenú: {selector_sub}")
+        except Exception as e:
+            print(f"[ERROR] No se pudo completar HoverYClick_Mixto: {e}")
 
     def Select_ID_Type(self, id_: str, tipo: str, dato, tiempo: float = 0.1):
         try:

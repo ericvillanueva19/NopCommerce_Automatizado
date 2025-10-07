@@ -103,24 +103,29 @@ class Funciones_Globales:
         print("Se termina la prueba Exitosamente")
 
     # -------------------- selects --------------------
-    def Select_Xpath_Type(self, xpath: str, tipo: str, dato, tiempo: float = 0.1):
+    def Select_Xpath_Type(self, xpath, tipo, dato, tiempo=5):
         try:
-            el = self.SEX(xpath)
-            sel = Select(el)
-            if tipo == "text":
-                sel.select_by_visible_text(str(dato))
-            elif tipo == "index":
+            # Espera personalizada (por si la página tarda en cargar el combo)
+            time.sleep(tiempo)
+
+            # Espera explícita para asegurar que el elemento esté presente
+            elemento = WebDriverWait(self.driver, 15).until(
+                EC.element_to_be_clickable((By.XPATH, xpath))
+            )
+            sel = Select(elemento)
+
+            if tipo == "index":
                 sel.select_by_index(int(dato))
             elif tipo == "value":
                 sel.select_by_value(str(dato))
+            elif tipo == "text":
+                sel.select_by_visible_text(str(dato))
             else:
-                raise ValueError("tipo debe ser 'text', 'index' o 'value'")
-            print(f"El campo Seleccionado es {dato}")
-            self._wait(tiempo)
-        except TimeoutException as ex:
-            print(ex.msg)
-            print("No se encontró el elemento " + xpath)
-        # ✅ Hover (colocar el puntero encima)
+                raise ValueError(f"Tipo '{tipo}' no reconocido.")
+
+            print(f"[OK] Select ejecutado en: {xpath} → {tipo}={dato}")
+        except Exception as e:
+            print(f"[ERROR] No se pudo seleccionar en {xpath}: {e}")
 
 
     # ✅ Hover sobre un elemento
@@ -283,6 +288,31 @@ class Funciones_Globales:
             print(ex.msg)
             print("No se encontró el elemento " + selector)
 
+    def Scroll(self, tipo=None, selector=None, cantidad=300, tiempo=1):
+        """
+        Desplaza la página hacia abajo.
+        - Si se pasa tipo y selector → hace scroll hasta el elemento.
+        - Si no, baja una cantidad de píxeles (por defecto 300).
+        """
+        try:
+            if tipo and selector:
+                from selenium.webdriver.common.by import By
+                from selenium.webdriver.support import expected_conditions as EC
+                from selenium.webdriver.support.ui import WebDriverWait
+                elemento = WebDriverWait(self.driver, 10).until(
+                    EC.presence_of_element_located((getattr(By, tipo.upper()), selector))
+                )
+                self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", elemento)
+                print(f"[OK] Scroll hasta el elemento: {selector}")
+            else:
+                self.driver.execute_script(f"window.scrollBy(0, {cantidad});")
+                print(f"[OK] Scroll hacia abajo {cantidad}px")
+
+            import time
+            time.sleep(tiempo)
+
+        except Exception as e:
+            print(f"[ERROR] No se pudo hacer scroll: {e}")
 
 
 

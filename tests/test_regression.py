@@ -21,10 +21,47 @@ class flujo_completo(unittest.TestCase):
         self.driver.maximize_window()
 
 
-
-    def test1(self): #Prueba de buscador
+    def test1(self): # NC-SM-01 - Registro válido (nuevo usuario)
         driver= self.driver
         f  = Funciones_Globales(driver)
         f.Navegar("https://demo.nopcommerce.com/",t)
-        f.Texto_Mixto("xpath","//input[@id='small-searchterms']","Iphone")
-        f.Click_Mixto("xpath","//button[@type='submit']",4)
+        f.Click_Mixto("xpath","//a[@class='ico-register']",4)
+        f.Check_Xpath("//span[@class='male']",3)
+        f.Texto_Mixto("xpath", "//input[@id='FirstName']", "Eric",3)
+        f.Texto_Mixto("xpath", "//input[@id='LastName']", "Villanueva",3)
+        f.Texto_Mixto("xpath", "//input[@id='Email']", "david0880@yopmail.com",3)
+        f.Texto_Mixto("xpath", "//input[@id='Password']", "Evv1234*",3)
+        f.Texto_Mixto("xpath", "//input[@id='ConfirmPassword']", "Evv1234*",3)
+        f.Click_Mixto("xpath", "//button[@id='register-button']", 4)
+
+    def test2(self): # NC-SM-01 - Registro válido (nuevo usuario)
+        driver= self.driver
+        f  = Funciones_Globales(driver)
+        f.Navegar("https://demo.nopcommerce.com/",t)
+        f.Click_Mixto("xpath","//a[@class='ico-register']",4)
+        f.Check_Xpath("//span[@class='male']",3)
+
+        f.Texto_Mixto("xpath", "//input[@id='Email']", "david0880@yopmail.com",3)
+        f.Texto_Mixto("xpath", "//input[@id='Password']", "Evv1234*",3)
+        f.Texto_Mixto("xpath", "//input[@id='ConfirmPassword']", "Evv1234*",3)
+        f.Click_Mixto("xpath", "//button[@id='register-button']", 4)
+    def test3(self): # NC-SM-01 - Registro válido (nuevo usuario)
+        driver = self.driver
+        f = Funciones_Globales(driver)
+        f.Navegar("https://demo.nopcommerce.com/", t)
+        f.Click_Mixto("xpath", "//a[@class='ico-login']", 4)
+        f.Texto_Mixto("xpath", "//input[@id='Email']", "david0880@yopmail.com", 3)
+        f.Texto_Mixto("xpath", "//input[@id='Password']", "Ericdavid", 3)
+        f.Click_Mixto("xpath", "//button[normalize-space()='Log in']", 7)
+    def test4(self): # NC-SM-01 - Registro válido (nuevo usuario)
+        driver = self.driver
+        f = Funciones_Globales(driver)
+        f.Navegar("https://demo.nopcommerce.com/", t)
+        f.Click_Mixto("xpath", "//a[@class='ico-login']", 4)
+        f.Texto_Mixto("xpath", "//input[@id='Email']", "david0880yopmail.com", 3)
+        f.Texto_Mixto("xpath", "//input[@id='Password']", "Evv1234*", 3)
+        f.Click_Mixto("xpath", "//button[normalize-space()='Log in']", 7)
+    def test5(self):
+        driver = self.driver
+        f = Funciones_Globales(driver)
+        f.Navegar("https://demo.nopcommerce.com/", t)

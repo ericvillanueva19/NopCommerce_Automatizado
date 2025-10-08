@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e0284a6-debc-4df7-bb8e-32c1dae46ccd" name="Changes" comment="primer archivo test y primer test de prueba">
-      <change afterPath="$PROJECT_DIR$/tests/test_smoke.py" afterDir="false" />
+    <list default="true" id="7e0284a6-debc-4df7-bb8e-32c1dae46ccd" name="Changes" comment="todos los escenario smoke completos">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_regression.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_regression.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +23,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="33kJKVNWY55z6c7OTT4yiw7GynJ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -35,6 +35,17 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python tests.Python tests for test_regression.flujo_completo.test1.executor": "Run",
+    "Python tests.Python tests for test_regression.flujo_completo.test3.executor": "Run",
+    "Python tests.Python tests for test_regression.flujo_completo.test4.executor": "Run",
+    "Python tests.Python tests for test_smoke.flujo_completo.test1.executor": "Run",
+    "Python tests.Python tests for test_smoke.flujo_completo.test2.executor": "Run",
+    "Python tests.Python tests for test_smoke.flujo_completo.test3.executor": "Run",
+    "Python tests.Python tests for test_smoke.flujo_completo.test4.executor": "Run",
+    "Python tests.Python tests for test_smoke.flujo_completo.test5.executor": "Run",
+    "Python tests.Python tests for test_smoke.flujo_completo.test6.executor": "Run",
+    "Python tests.Python tests for test_smoke.flujo_completo.test7.executor": "Run",
+    "Python tests.Python tests for test_smoke.flujo_completo.test8.executor": "Run",
+    "Python tests.Python tests for test_smoke.flujo_completo.test9.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/Heriberto Villanueva/Desktop/NopCommerce_Automatizado",
@@ -46,7 +57,7 @@
       <recent name="C:\Users\Heriberto Villanueva\Desktop\NopCommerce_Automatizado" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python tests.Python tests for test_regression.flujo_completo.test4">
     <configuration name="Python tests for test_regression.flujo_completo.test1" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="NopCommerce_Automatizado" />
       <option name="ENV_FILES" value="" />
@@ -62,9 +73,73 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests for test_regression.flujo_completo.test3" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="NopCommerce_Automatizado" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_regression.flujo_completo.test3&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_regression.flujo_completo.test4" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="NopCommerce_Automatizado" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_regression.flujo_completo.test4&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_smoke.flujo_completo.test8" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="NopCommerce_Automatizado" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_smoke.flujo_completo.test8&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_smoke.flujo_completo.test9" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="NopCommerce_Automatizado" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_smoke.flujo_completo.test9&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for test_regression.flujo_completo.test4" />
+        <item itemvalue="Python tests.Python tests for test_regression.flujo_completo.test3" />
         <item itemvalue="Python tests.Python tests for test_regression.flujo_completo.test1" />
+        <item itemvalue="Python tests.Python tests for test_smoke.flujo_completo.test9" />
+        <item itemvalue="Python tests.Python tests for test_smoke.flujo_completo.test8" />
       </list>
     </recent_temporary>
   </component>
@@ -116,7 +191,23 @@
       <option name="project" value="LOCAL" />
       <updated>1759858211633</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="primeros escenarios de las pruebas smoke">
+      <option name="closed" value="true" />
+      <created>1759863979387</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1759863979387</updated>
+    </task>
+    <task id="LOCAL-00006" summary="todos los escenario smoke completos">
+      <option name="closed" value="true" />
+      <created>1759869643318</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1759869643318</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -133,6 +224,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Inicio del proyecto" />
     <MESSAGE value="primer archivo test y primer test de prueba" />
-    <option name="LAST_COMMIT_MESSAGE" value="primer archivo test y primer test de prueba" />
+    <MESSAGE value="primeros escenarios de las pruebas smoke" />
+    <MESSAGE value="todos los escenario smoke completos" />
+    <option name="LAST_COMMIT_MESSAGE" value="todos los escenario smoke completos" />
   </component>
 </project>
